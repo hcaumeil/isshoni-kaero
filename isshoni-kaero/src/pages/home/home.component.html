@@ -1,0 +1,34 @@
+<div style="">
+  <h4>Share your email to communicate : {{user}}</h4>
+  <button type="button" (click)="disconnect()">Disconnect</button>
+  <div style="height:  30px;"></div>
+  <div style="display: flex; flex-direction: row;">
+    <div style="width: 150px; background: red;">
+      <button type="button" (click)="channelplus()">+</button>
+      <h4>Channels :</h4>
+      <div style="display: flex; flex-direction: column;">
+        @for (c of contacts; track c) { <button (click)="select($event)" value="{{c.id}}">{{c.name}}</button>
+        }
+      </div>
+    </div>
+    <div style="width: 30px;"></div>
+    <div>
+      <h3>Messages : </h3>
+      @for (m of messages; track m) {
+      <div>
+        <p>{{m.sender}} - {{m.sent_at}}</p>
+        <h5>{{m.content}}</h5>
+      </div>
+      } @empty {
+      <h4> Select a channel </h4>
+      }
+      <div>
+        <div>
+          <label>Message:</label>
+          <input [(ngModel)]="content" type="text" required />
+        </div>
+        <button type="button" (click)="send()">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

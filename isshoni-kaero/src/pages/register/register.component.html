@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+  <h3>Register</h3>
+  <div>
+    <div>
+      <label>Email:</label>
+      <input [(ngModel)]="txtusername" id="username" type="text" required />
+    </div>
+    <div>
+      <label>Password:</label>
+      <input [(ngModel)]="txtpassword" id="password" type="text" required />
+    </div>
+    <div>
+      <label>Name:</label>
+      <input [(ngModel)]="txtname" id="password" type="text" required />
+    </div>
+    <button type="button" (click)="register()">Register</button>
+  </div>
+</div>

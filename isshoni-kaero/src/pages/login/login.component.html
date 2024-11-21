@@ -1,0 +1,16 @@
+<div style="text-align: center;">
+  <h3>Login</h3>
+  <div>
+    <div>
+      <label>UserName:</label>
+      <input [(ngModel)]="txtusername" id="username" type="text" required />
+    </div>
+    <div>
+      <label>Password:</label>
+      <input [(ngModel)]="txtpassword" id="password" type="text" required />
+    </div>
+    <button type="button" (click)="login()">Login</button>
+    <div style="min-height: 20px;"></div>
+    <button type="button" (click)="register()">Register</button>
+  </div>
+</div>
