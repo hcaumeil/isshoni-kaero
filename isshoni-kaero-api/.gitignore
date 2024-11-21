@@ -1,0 +1,6 @@
+__pycache__
+justfile
+.env
+venv
+*.goud
+*.goudron
