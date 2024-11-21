@@ -4,3 +4,4 @@ justfile
 venv
 *.goud
 *.goudron
+nohup.*

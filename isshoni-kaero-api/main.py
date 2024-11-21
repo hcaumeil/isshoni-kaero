@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
 
 from login import check_permission, router as login_router
+from channels import router as channels_router
 from users import router as users_router
 from error import ErrorResponse, ErrorKind
 
@@ -53,7 +54,7 @@ app.state.db = db
 
 app.include_router(login_router)
 app.include_router(users_router, prefix="/users")
-# app.include_router(building_router, prefix="/buildings")
+app.include_router(channels_router, prefix="/channels")
 # app.include_router(floor_router, prefix="/floors")
 # app.include_router(place_router, prefix="/places")
 # app.include_router(booking_router, prefix="/bookings")
